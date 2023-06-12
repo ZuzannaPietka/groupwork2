@@ -18,3 +18,5 @@ output_data = order_to_right(data)
 
 for row in output_data:
     print(row)
+
+
