@@ -14,9 +14,10 @@ def order_to_right(input_list):
 
 data = [[1, 2, 10, 150], [10, 2, 1000, 2], [1, 120, 1, 1000]]
 
-output_data = order_to_right(data)
+output_data_right = order_to_right(data)
+print("Output(order to right):")
 
-for row in output_data:
+for row in output_data_right:
     print(row)
 
 
@@ -35,7 +36,23 @@ def order_to_left(input_list):
 
 data = [[1, 2, 10, 150], [10, 2, 1000, 2], [1, 120, 1, 1000]]
 
-output_data = order_to_left(data)
+output_data_left = order_to_left(data)
+print("Output(order to left):")
 
-for row in output_data:
+for row in output_data_left:
   print(row)
+
+
+
+expected_output_right = [[' 1', '  2', '  10', ' 150'],
+                         ['10', '  2', '1000', '   2'],
+                         [' 1', '120', '   1', '1000']]
+
+expected_output_left = [['1 ', '2  ', '10  ', '150 '],
+                        ['10', '2  ', '1000', '2   '],
+                        ['1 ', '120', '1   ', '1000']]
+
+
+
+assert order_to_right(data) == expected_output_right
+assert order_to_left(data) == expected_output_left
